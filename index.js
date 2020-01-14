@@ -36,7 +36,7 @@ try {
     console.log("Successfully created a new heroku app");
   }
 
-  execSync("git push heroku HEAD:refs/heads/master");
+  execSync("git push heroku HEAD:refs/heads/master --force");
   core.setOutput("status", "Successfully deployed heroku app");
 } catch (err) {
   core.setFailed(err.toString());
